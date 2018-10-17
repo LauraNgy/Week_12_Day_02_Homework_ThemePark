@@ -5,16 +5,17 @@ public class TobaccoStall extends Stall implements ITicketed, ISecurity {
 
     @Override
     public boolean isAllowed(Visitor visitor) {
-        return false;
+        if (visitor.getAge() < 18) return false;
+        return true;
     }
 
     @Override
     public double defaultPrice() {
-        return 0;
+        return 6.60;
     }
 
     @Override
     public double priceFor(Visitor visitor) {
-        return 0;
+        return defaultPrice();
     }
 }
