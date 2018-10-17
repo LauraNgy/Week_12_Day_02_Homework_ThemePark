@@ -5,11 +5,11 @@ public class IceCreamStall extends Stall implements ITicketed{
 
     @Override
     public double defaultPrice() {
-        return 0;
+        return 2.80;
     }
 
     @Override
     public double priceFor(Visitor visitor) {
-        return 0;
+        return defaultPrice();
     }
 }
